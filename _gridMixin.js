@@ -16,7 +16,17 @@ define([
 
 			}
 			return arrayOfValues;
+		},
+		_getSelectedValue: function() {
+			console.log("working selected value?????")
+			var arrayOfValues = [];
+			var _selection = this.selection
+			for (eachRowId in _selection) {
+				arrayOfValues.push(this.row(eachRowId))
+			}
+			return arrayOfValues;
 		}
+
 	});
 	return getValueExtension
 
